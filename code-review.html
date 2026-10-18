@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Code Review | Zury's Capstone</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title">Code Review</h1>
+
+        <p class="subtitle">
+            CS-499 Computer Science Capstone |
+            Southern New Hampshire University
+        </p>
+
+        <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch color theme">
+            🌙 Dark Mode
+        </button>
+
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+
+            <a href="self-assessment.html">
+                Self-Assessment
+            </a>
+
+            <a href="code-review.html"
+               class="active"
+               aria-current="page">
+                Code Review
+            </a>
+
+            <a href="enhancement-1.html">
+                Enhancement 1
+            </a>
+
+            <a href="enhancement-2.html">
+                Enhancement 2
+            </a>
+
+            <a href="enhancement-3.html">
+                Enhancement 3
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-card">
+
+            <h2>Travlr Getaways Code Review</h2>
+
+            <p>
+                This code review examines the original
+                Travlr Getaways application developed
+                during CS-465. The review evaluates
+                the existing application structure,
+                identifies areas for improvement,
+                and outlines the enhancements planned
+                for the CS-499 capstone.
+            </p>
+
+            <p>
+                The review focuses on software design
+                and engineering, algorithms and data
+                structures, and database functionality.
+                These areas form the foundation for
+                the three enhancements documented
+                throughout this ePortfolio.
+            </p>
+
+        </section>
+
+        <section class="content-card">
+
+    <h2>Code Review Walkthrough</h2>
+
+    <video class="code-review-video" controls preload="metadata">
+        <source
+            src="assets/CS499_2 - 2 Code Review_Zury Martinez.mp4"
+            type="video/mp4">
+
+        Your browser does not support the video tag.
+    </video>
+
+</section>
+
+        <section class="content-card">
+
+            <h2>Code Review Findings</h2>
+
+            <div class="code-findings-scroll">
+
+            <p>
+                Before implementing my CS-499 enhancements, 
+                I reviewed the original Travlr Getaways
+                application to evaluate its existing 
+                functionality, code structure, and areas 
+                that could benefit from improvement. 
+                This review helped me identify changes 
+                that would strengthen security, improve 
+                the user experience, and expand database
+                functionality. 
+            </p>
+
+            <h3>Software Design and Engineering</h3>
+
+            <p>
+                One area identified during the review was 
+                the application's access control. 
+                Although the original application supported 
+                authentication, additional authorization 
+                checks were needed to distinguish between 
+                regular users and administrators. 
+                I also identified opportunities to improve 
+                error handling and defensive programming. 
+                These findings guided my first enhancement, 
+                which focused on JWT authentication, 
+                role-based authorization, and protected 
+                API operations. 
+            </p>
+
+            <h3>Algorithms and Data Structures</h3>
+
+            <p>
+                The original trip listing displayed available
+                travel packages but offered limited options 
+                for organizing or locating specific trips. 
+                I identified an opportunity to improve
+                usability by introducing search and sorting 
+                functionality. My second enhancement 
+                addresses this limitation by implementing 
+                client-side trip searching and price sorting 
+                using Angular and TypeScript.
+            </p>
+
+            <h3>Databases</h3>
+
+            <p>
+                The original application retrieved trip 
+                information from MongoDB without allowing 
+                users to filter results by a selected 
+                price range. I identified an opportunity 
+                to extend the existing API to support 
+                database-side filtering. My third 
+                enhancement introduced minimum and maximum 
+                price parameters and MongoDB comparison 
+                operators to retrieve trips within a 
+                specified price range.
+            </p>
+            
+        </div>
+
+        </section>
+    </main>
+
+    <script src="theme.js"></script>
+
+</body>
+</html>

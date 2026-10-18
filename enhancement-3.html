@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enhancement 3 | Zury's Capstone</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1 class="title">Enhancement 3</h1>
+
+        <p class="subtitle">
+            Databases |
+            CS-499 Computer Science Capstone
+        </p>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme">
+            🌙 Dark Mode
+        </button>
+
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="index.html">Home</a>
+
+            <a href="self-assessment.html">
+                Self-Assessment
+            </a>
+
+            <a href="code-review.html">
+                Code Review
+            </a>
+
+            <a href="enhancement-1.html">
+                Enhancement 1
+            </a>
+
+            <a href="enhancement-2.html">
+                Enhancement 2
+            </a>
+
+            <a href="enhancement-3.html" class="active" aria-current="page">
+                Enhancement 3
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Enhancement 3 Overview -->
+
+        <section class="content-card">
+
+            <h2>Databases</h2>
+
+            <p>
+                This enhancement focuses on improving
+                database query functionality in the
+                Travlr Getaways application by introducing
+                server-side price-range filtering using
+                MongoDB and Mongoose.
+            </p>
+
+            <p>
+                The original application retrieved travel
+                packages without allowing users to restrict
+                results to a specific price range. I enhanced
+                the Express API to accept minimum and maximum
+                price parameters and dynamically construct
+                MongoDB queries based on those values.
+            </p>
+
+            <p>
+                The implementation uses MongoDB's
+                $gte (greater than or equal to) and
+                $lte (less than or equal to) comparison
+                operators to filter travel packages
+                using the numeric perPerson field.
+                These queries allow the database to
+                return only trips within the requested
+                price range.
+            </p>
+
+            <p>
+                I also updated the Angular trip listing
+                interface to include minimum and maximum
+                price inputs and an Apply Filter button.
+                This connects the client-side controls
+                to the Express API and MongoDB database,
+                demonstrating how the different layers
+                of a full-stack application work together.
+            </p>
+
+        </section>
+
+
+        <!-- Enhancement 3 Narrative -->
+
+        <details class="content-card assessment-card">
+
+            <summary>Enhancement 3 Narrative</summary>
+
+            <div class="card-scroll">
+
+                <h3>Artifact Description</h3>
+
+                <p>
+                    The artifact selected for this enhancement
+                    is Travlr Getaways, a full-stack travel
+                    application originally developed during
+                    CS-465. The application uses the MEAN stack
+                    (MongoDB, Express.js, Angular, and Node.js)
+                    to manage and display travel packages.
+                    For this enhancement, I focused on improving
+                    how the application retrieves trip data
+                    from its MongoDB database.
+                </p>
+
+                <h3>Justification for Inclusion</h3>
+
+                <p>
+                    I included this artifact in my ePortfolio
+                    because it demonstrates my ability to
+                    design and implement database queries
+                    that support application functionality.
+                    I enhanced the Express API to accept
+                    minimum and maximum price parameters
+                    and used Mongoose to construct MongoDB
+                    queries that return travel packages
+                    within the requested price range.
+                </p>
+
+                <p>
+                    The implementation uses MongoDB's $gte
+                    and $lte comparison operators with the
+                    numeric perPerson field. I also connected
+                    the Angular price-filtering controls to
+                    the API, allowing users to request
+                    filtered results directly from the database.
+                    This approach reduces unnecessary data
+                    retrieval and demonstrates communication
+                    between the client, server, and database.
+                </p>
+
+                <h3>Course Outcomes</h3>
+
+                <p>
+                    This enhancement supports the course
+                    outcome focused on applying appropriate
+                    computing techniques, skills, and tools
+                    to develop solutions that accomplish
+                    practical goals. By implementing dynamic
+                    MongoDB queries and integrating them
+                    with the Express API and Angular interface,
+                    I demonstrated my ability to improve
+                    database operations within an existing
+                    full-stack application.
+                </p>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    Completing this enhancement strengthened
+                    my understanding of how data types and
+                    query conditions affect database results.
+                    One challenge was troubleshooting a problem
+                    where applying minimum and maximum price
+                    filters caused the displayed trips to
+                    disappear unexpectedly.
+                </p>
+
+                <p>
+                    I addressed this issue by reviewing the
+                    price field's data type, validating the
+                    values received from the API, and refining
+                    the query logic. This experience reinforced
+                    the importance of consistent data types,
+                    defensive programming, and testing database
+                    queries with different input values.
+                </p>
+
+            </div>
+
+        </details>
+
+        
+<!-- Source Code and Enhancement -->
+
+<section class="content-card">
+
+    <h2>Source Code and Enhancement</h2>
+
+    <p>
+        The links below provide access to the original
+        Travlr Getaways application and the changes
+        implemented for Enhancement 3.
+    </p>
+
+    <h3>Original Artifact</h3>
+
+    <p>
+        The original CS-465 application provides the
+        foundation for the enhancements completed
+        during my CS-499 capstone.
+    </p>
+
+    <a href="https://github.com/Zmart027/CS-465-Full-Stack-Development-/tree/module7"
+       class="button github-button"
+       target="_blank"
+       rel="noopener noreferrer">
+        View Original Artifact
+    </a>
+
+    <h3>Enhancement 3: Databases</h3>
+
+    <p>
+        This enhancement introduces server-side
+        price-range filtering using MongoDB and
+        Mongoose. The Express API processes minimum
+        and maximum price parameters and constructs
+        database queries using the $gte and $lte
+        comparison operators to retrieve matching
+        travel packages.
+    </p>
+
+    <a href="https://github.com/Zmart027/CS-465-Full-Stack-Development-/pull/3/changes"
+       class="button github-button"
+       target="_blank"
+       rel="noopener noreferrer">
+        View Enhancement 3 Code
+    </a>
+
+</section>
+
+
+<!-- Enhancement 3 Testing and Validation -->
+
+<section class="content-card">
+
+    <h2>Testing and Validation</h2>
+
+    <div class="testing-validation-scroll">
+
+        <h3>Minimum Price Filtering</h3>
+
+        <p>
+            I tested the minimum price filter by entering
+            a price threshold in the Angular interface
+            and applying the filter. The Express API
+            receives the minimum price as a query
+            parameter and uses MongoDB's $gte operator
+            to retrieve trips with per-person prices
+            greater than or equal to the specified value.
+        </p>
+
+        <h3>Maximum Price Filtering</h3>
+
+        <p>
+            I also tested the maximum price filter to
+            verify that the application could retrieve
+            travel packages at or below a specified
+            price. The API uses MongoDB's $lte operator
+            to construct the query condition and return
+            matching trips from the database.
+        </p>
+
+        <h3>Combined Price-Range Filtering</h3>
+
+        <p>
+            I tested the minimum and maximum price
+            inputs together to verify that the database
+            returned trips within the selected range.
+            Both comparison operators are applied to
+            the perPerson field, allowing MongoDB to
+            evaluate the lower and upper price limits
+            in a single query.
+        </p>
+
+        <h3>Debugging and Data Validation</h3>
+
+        <p>
+            During testing, I encountered an issue where
+            applying both price filters caused the trip
+            listings to disappear unexpectedly. I
+            investigated the problem by reviewing the
+            MongoDB data, the perPerson schema field,
+            and the values passed through the Express API.
+        </p>
+
+        <p>
+            I refined the controller logic to convert
+            the received price parameters into numbers
+            before constructing the database query.
+            I also incorporated error handling to
+            provide appropriate HTTP responses when
+            no matching trips are found or when a
+            database operation fails.
+        </p>
+
+        <h3>Testing Results</h3>
+
+        <p>
+            After correcting the filtering logic, the
+            application successfully retrieved travel
+            packages within the requested price range.
+            This confirmed that the Angular controls,
+            Express API, Mongoose queries, and MongoDB
+            database were communicating correctly.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Enhancement 3 Testing Screenshots -->
+
+<section class="content-card">
+
+    <h2>Testing Screenshots</h2>
+
+    <p>
+        The following screenshots document the
+        MongoDB price-range filtering functionality
+        implemented during Enhancement 3.
+    </p>
+
+    <!-- Price-Range Filtering -->
+
+    <details class="assessment-card">
+
+        <summary>Price-Range Filtering</summary>
+
+        <div class="card-scroll">
+
+            <p>
+                These screenshots demonstrate how the
+                Angular interface allows users to apply
+                minimum and maximum price filters and
+                retrieve matching travel packages.
+            </p>
+
+            <!-- Default Trip Listing -->
+
+            <figure class="testing-figure">
+
+                <img
+                    src="assets/enhancement3/price-filter-default.png"
+                    alt="Original trip listing with price filtering controls" loading="lazy">
+
+                <figcaption>
+                    Figure 1. Original trip listing
+                    displaying available travel packages
+                    before applying price filters.
+                </figcaption>
+
+            </figure>
+
+            <!-- Minimum Price Filtering -->
+
+            <figure class="testing-figure">
+
+                <img
+                    src="assets/enhancement3/price-filter-minimum.png"
+                    alt="Travel packages filtered using a minimum price" loading="lazy">
+
+                <figcaption>
+                    Figure 2. Minimum price filtering
+                    displaying travel packages priced
+                    at $2,000 or higher.
+                </figcaption>
+
+            </figure>
+
+            <!-- Maximum Price Filtering -->
+
+            <figure class="testing-figure">
+
+                <img
+                    src="assets/enhancement3/price-filter-maximum.png"
+                    alt="Travel packages filtered using a maximum price" loading="lazy">
+
+                <figcaption>
+                    Figure 3. Maximum price filtering
+                    displaying travel packages priced
+                    at $1,200 or lower.
+                </figcaption>
+
+            </figure>
+
+            <!-- Combined Price-Range Filtering -->
+
+            <figure class="testing-figure">
+
+                <img
+                    src="assets/enhancement3/price-filter-range.png"
+                    alt="Travel packages filtered between two price limits" loading="lazy">
+
+                <figcaption>
+                    Figure 4. Combined price-range filtering
+                    displaying travel packages between
+                    $1,000 and $2,000.
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+    </details>
+
+    <!-- Database and Query Verification -->
+
+    <details class="assessment-card">
+
+        <summary>Database and Query Verification</summary>
+
+        <div class="card-scroll">
+
+            <p>
+                These screenshots demonstrate how
+                MongoDB stores trip prices and how
+                the Express API uses comparison
+                operators to filter travel packages.
+            </p>
+
+            <!-- MongoDB Trip Records -->
+
+            <figure class="testing-figure">
+
+                <img
+                    src="assets/enhancement3/mongodb-trip-price-records.png"
+                    alt="MongoDB Compass displaying numeric trip prices" loading="lazy">
+
+                <figcaption>
+                    Figure 5. MongoDB Compass displaying
+                    trip documents with numeric perPerson
+                    values used for price-range filtering.
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+    </details>
+
+</section>
+
+
+    </main>
+
+    <script src="theme.js"></script>
+
+</body>
+
+</html>

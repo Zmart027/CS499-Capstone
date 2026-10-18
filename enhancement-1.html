@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enhancement 1 | Zury's Capstone</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title">Enhancement 1</h1>
+
+        <p class="subtitle">
+            Software Design and Engineering |
+            CS-499 Computer Science Capstone
+        </p>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme">
+            🌙 Dark Mode
+        </button>
+
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+
+            <a href="self-assessment.html">
+                Self-Assessment
+            </a>
+
+            <a href="code-review.html">
+                Code Review
+            </a>
+
+            <a href="enhancement-1.html" class="active" aria-current="page">
+                Enhancement 1
+            </a>
+
+            <a href="enhancement-2.html">
+                Enhancement 2
+            </a>
+
+            <a href="enhancement-3.html">
+                Enhancement 3
+            </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="content-card">
+
+            <h2>Software Design and Engineering</h2>
+
+            <p>
+                This enhancement focuses on strengthening
+                the security and overall design of the
+                Travlr Getaways application, originally
+                developed in CS-465 using the MEAN stack.
+            </p>
+
+            <p>
+                The enhancement introduces role-based
+                authorization using JSON Web Tokens (JWT)
+                to distinguish between regular users
+                and administrators. Protected backend
+                routes restrict trip modification
+                operations to authorized users, while
+                Angular interface controls reflect
+                the user's assigned permissions.
+            </p>
+
+        </section>
+
+        <details class="content-card assessment-card">
+
+
+            <summary> Enhancement 1 Narrative</summary>
+
+            <div class="card-scroll">
+
+                <h3>Artifact Description</h3>
+                <p>
+                    The artifact I selected for this enhancement
+                    is the Travlr Getaways full-stack web
+                    application, originally developed during
+                    CS-465. The application uses the MEAN stack
+                    to manage and display travel packages.
+                </p>
+
+                <h3>Justification for Inclusion</h3>
+
+                <p>
+                    I selected this artifact because it
+                    demonstrated my ability to improve an
+                    existing full-stack application rather
+                    than developing an entirely new system.
+                    For this enhancement, I strengthened
+                    authentication and authorization by
+                    implementing JWT-based access controls,
+                    distinguishing regular users from
+                    administrators, and protecting API
+                    endpoints responsible for modifying
+                    trip information.
+                </p>
+
+                <h3>Course Outcomes</h3>
+
+                <p>
+                    This enhancement demonstrates my ability
+                    to apply software engineering practices
+                    and develop a security mindset. By
+                    implementing role-based authorization
+                    and validating user permissions, I
+                    addressed potential vulnerabilities
+                    associated with unauthorized access
+                    to application resources.
+                </p>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    Enhancing Travlr Getaways helped me
+                    better understand the relationship
+                    between authentication, authorization,
+                    and application security. I learned
+                    that hiding administrative controls
+                    in the Angular interface is not
+                    sufficient to protect an application.
+                    Authorization must also be enforced
+                    on the backend to prevent unauthorized
+                    API requests. I tested these changes
+                    using Postman, JWT.io, and MongoDB
+                    to verify authentication behavior,
+                    token generation, and access restrictions.
+                </p>
+            </div>
+        </details>
+
+
+        <section class="content-card">
+
+            <h2>Source Code and Enhancement</h2>
+
+            <p>
+                The links below provide access to the original
+                Travlr Getaways application and the changes
+                implemented for Enhancement 1.
+            </p>
+
+            <h3>Original Artifact</h3>
+
+            <p>
+                The original CS-465 application provides the
+                foundation for the enhancements completed
+                during my CS-499 capstone.
+            </p>
+
+            <a href="https://github.com/Zmart027/CS-465-Full-Stack-Development-/tree/module7"
+                class="button github-button" target="_blank" rel="noopener noreferrer">
+                View Original Artifact
+            </a>
+
+            <h3>Enhancement 1: Software Design and Engineering</h3>
+
+            <p>
+                This enhancement introduces JWT-based authentication,
+                role-based authorization, and protected API routes
+                to improve application security.
+            </p>
+
+            <a href="https://github.com/Zmart027/CS-465-Full-Stack-Development-/pull/1/changes"
+                class="button github-button" target="_blank" rel="noopener noreferrer">
+                View Enhancement 1 Code
+            </a>
+
+        </section>
+
+
+        <section class="content-card">
+
+            <h2>Testing and Validation</h2>
+
+            <div class="card-scroll">
+
+            <p>
+                After implementing Enhancement 1, I tested
+                the application's authentication and
+                authorization functionality to verify that
+                users could access only the operations
+                permitted by their assigned roles.
+            </p>
+
+            <h3>Postman API Testing</h3>
+
+            <p>
+                I used Postman to register and authenticate
+                regular users and administrators. I verified
+                that login requests returned JWTs and tested
+                protected API endpoints to confirm that
+                administrative operations were restricted
+                to authorized users.
+            </p>
+
+            <h3>JWT Verification</h3>
+
+            <p>
+                I used JWT.io to inspect the generated tokens
+                and confirm that they contained the expected
+                authentication information and role-related
+                claims.
+            </p>
+
+            <h3>MongoDB Verification</h3>
+
+            <p>
+                I examined MongoDB records to confirm that
+                registered user accounts were stored
+                successfully. I also verified that
+                administrative users could add and edit
+                trip information, while regular users
+                were limited to viewing trips.
+            </p>
+
+            <h3>Testing Results</h3>
+
+            <p>
+                These tests demonstrated that the enhanced
+                application enforced role-based access
+                restrictions and supported the intended
+                authentication workflow. The testing also
+                reinforced the importance of validating
+                permissions on the backend rather than
+                relying only on interface-level restrictions.
+            </p>
+            </div>
+
+        </section>
+
+
+        <!-- Enhancement 1 Testing Screenshots -->
+
+        <section class="content-card">
+
+            <h2>Testing Screenshots</h2>
+
+            <p>
+                The following screenshots document the testing
+                performed during Enhancement 1. They demonstrate
+                user registration, JWT verification, database
+                records, and the application's login and trip
+                listing interfaces.
+            </p>
+
+
+            <!-- Authentication and JWT Verification -->
+
+            <details class="content-card assessment-card">
+
+                <summary>Authentication and JWT Verification</summary>
+
+                <div class="card-scroll">
+
+                    <p>
+                        I used Postman to register administrator and
+                        regular user accounts through the application's
+                        API. I then inspected the generated JSON Web
+                        Tokens using JWT.io to verify that the token
+                        payloads contained the expected user information
+                        and assigned roles.
+                    </p>
+
+                    <figure class="testing-figure">
+
+                        <img src="assets/enhancement1/admin-jwt-verification.png"
+                            alt="Postman administrator registration and JWT.io token verification" loading="lazy">
+
+                        <figcaption>
+                            Figure 1. Administrator registration
+                            through Postman and JWT verification
+                            showing the admin role.
+                        </figcaption>
+
+                    </figure>
+
+                    <figure class="testing-figure">
+
+                        <img src="assets/enhancement1/user-jwt-verification.png"
+                            alt="Postman regular user registration and JWT.io token verification" loading="lazy">
+
+                        <figcaption>
+                            Figure 2. Regular user registration
+                            and JWT verification showing the
+                            user role.
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </details>
+
+
+            <!-- MongoDB Verification -->
+
+            <details class="content-card assessment-card">
+
+                <summary>MongoDB Verification</summary>
+
+                <div class="card-scroll">
+
+                    <p>
+                        I used MongoDB Compass to inspect the
+                        application's users collection and verify
+                        that both registered accounts were stored
+                        with their corresponding roles. The records
+                        also contain password hashes rather than
+                        plaintext passwords.
+                    </p>
+
+                    <figure class="testing-figure">
+
+                        <img src="assets/enhancement1/mongodb-user-records.png"
+                            alt="MongoDB Compass displaying administrator and regular user records" loading="lazy">
+
+                        <figcaption>
+                            Figure 3. MongoDB Compass displaying
+                            the administrator and regular user
+                            records in the Travlr database.
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </details>
+
+
+            <!-- Application Interface Testing -->
+
+            <details class="content-card assessment-card">
+
+                <summary>Application Interface Testing</summary>
+
+                <div class="card-scroll">
+
+                    <p>
+                        I also examined the Angular application's
+                        login and trip listing interfaces while
+                        testing the authentication workflow. These
+                        screenshots document the interface used
+                        during administrator and regular user testing.
+                    </p>
+
+                    <figure class="testing-figure">
+
+                        <img src="assets/enhancement1/admin-login.png" alt="Travlr Getaways administrator login form"
+                            loading="lazy">
+
+                        <figcaption>
+                            Figure 4. Administrator login form
+                            in the Travlr Getaways application.
+                        </figcaption>
+
+                    </figure>
+
+                    <figure class="testing-figure">
+
+                        <img src="assets/enhancement1/trip-list-before-login.png"
+                            alt="Travlr Getaways public trip listing page" loading="lazy">
+
+                        <figcaption>
+                            Figure 5. Trip listing page displaying
+                            available travel packages before login.
+                        </figcaption>
+
+                    </figure>
+
+                    <figure class="testing-figure">
+
+                        <img src="assets/enhancement1/user-login.png" alt="Travlr Getaways regular user login form"
+                            loading="lazy">
+
+                        <figcaption>
+                            Figure 6. Regular user login form
+                            used during authentication testing.
+                        </figcaption>
+
+                    </figure>
+
+                    <figure class="testing-figure">
+
+                        <img src="assets/enhancement1/trip-list-user-view.png"
+                            alt="Travlr Getaways trip listing during regular user testing" loading="lazy">
+
+                        <figcaption>
+                            Figure 7. Trip listing interface
+                            captured during regular user testing.
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </details>
+        </section>
+
+    </main>
+
+    <script src="theme.js"></script>
+
+</body>
+
+</html>

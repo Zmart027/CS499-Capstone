@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enhancement 2 | Zury's Capstone</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1 class="title">Enhancement 2</h1>
+
+        <p class="subtitle">
+            Algorithms and Data Structures |
+            CS-499 Computer Science Capstone
+        </p>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme">
+            🌙 Dark Mode
+        </button>
+
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="index.html">Home</a>
+
+            <a href="self-assessment.html">
+                Self-Assessment
+            </a>
+
+            <a href="code-review.html">
+                Code Review
+            </a>
+
+            <a href="enhancement-1.html">
+                Enhancement 1
+            </a>
+
+            <a href="enhancement-2.html" class="active" aria-current="page">
+                Enhancement 2
+            </a>
+
+            <a href="enhancement-3.html">
+                Enhancement 3
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="content-card">
+
+            <h2>Algorithms and Data Structures</h2>
+
+            <p>
+                This enhancement focuses on improving
+                the usability of the Travlr Getaways
+                application by introducing trip
+                searching and price-sorting functionality
+                using Angular and TypeScript.
+            </p>
+
+            <p>
+                The original application displayed
+                available travel packages without
+                providing convenient options for
+                locating or organizing specific trips.
+                I enhanced the trip listing component
+                to allow users to search for trips
+                by name and sort the results by price
+                in ascending or descending order.
+            </p>
+
+            <p>
+                The implementation uses TypeScript
+                array operations to process trip
+                information on the client side.
+                Separate arrays maintain the original
+                trip collection and the filtered
+                results, allowing search and sorting
+                operations without permanently
+                modifying the original data.
+            </p>
+
+        </section>
+
+
+        <!-- Enhancement 2 Narrative -->
+
+        <details class="content-card assessment-card">
+
+            <summary>Enhancement 2 Narrative</summary>
+
+            <div class="card-scroll">
+
+                <h3>Artifact Description</h3>
+
+                <p>
+                    The artifact selected for this enhancement
+                    is Travlr Getaways, a full-stack travel
+                    application originally developed during
+                    CS-465. The application uses the MEAN stack
+                    (MongoDB, Express.js, Angular, and Node.js)
+                    to manage and display travel packages.
+                    I selected the Angular trip listing
+                    component for this enhancement because
+                    it provided an opportunity to improve
+                    how users interact with trip information.
+                </p>
+
+                <h3>Justification for Inclusion</h3>
+
+                <p>
+                    I included this artifact in my ePortfolio
+                    because it demonstrates my ability to apply
+                    algorithmic principles and data structures
+                    to an existing application. I implemented
+                    trip searching and price sorting using
+                    TypeScript array operations. The search
+                    feature allows users to locate trips by
+                    name, while the sorting feature organizes
+                    results by price in ascending or descending
+                    order.
+                </p>
+
+                <p>
+                    To support these operations, I maintained
+                    separate arrays for the original trip data
+                    and the filtered results. This approach
+                    allows users to change their search and
+                    sorting selections without permanently
+                    modifying the original trip collection.
+                    I chose a client-side implementation
+                    because it addressed the application's
+                    requirements without introducing
+                    unnecessary complexity.
+                </p>
+
+                <h3>Course Outcomes</h3>
+
+                <p>
+                    This enhancement supports the course
+                    outcome focused on designing and evaluating
+                    computing solutions using algorithmic
+                    principles and appropriate computer
+                    science practices. By implementing search
+                    and sorting functionality, I demonstrated
+                    how data processing techniques can improve
+                    application usability while considering
+                    maintainability and design trade-offs.
+                </p>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    Completing this enhancement helped me
+                    better understand how arrays and
+                    conditional logic can be used to
+                    manipulate and display application data.
+                    One challenge was ensuring that searching
+                    and sorting worked together without
+                    unexpectedly changing the original trip
+                    collection. Maintaining separate arrays
+                    helped me organize the filtering logic
+                    and preserve the original data.
+                </p>
+
+                <p>
+                    This experience reinforced the importance
+                    of testing multiple user interactions,
+                    including applying search terms, changing
+                    sorting options, and clearing filters.
+                    It also showed me that relatively small
+                    improvements can make an existing
+                    application more functional and
+                    user-friendly.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <!-- Source Code and Enhancement -->
+
+        <section class="content-card">
+
+            <h2>Source Code and Enhancement</h2>
+
+            <p>
+                The links below provide access to the original
+                Travlr Getaways application and the changes
+                implemented for Enhancement 2.
+            </p>
+
+            <h3>Original Artifact</h3>
+
+            <p>
+                The original CS-465 application provides the
+                foundation for the enhancements completed
+                during my CS-499 capstone.
+            </p>
+
+            <a href="https://github.com/Zmart027/CS-465-Full-Stack-Development-/tree/module7"
+                class="button github-button" target="_blank" rel="noopener noreferrer">
+                View Original Artifact
+            </a>
+
+            <h3>Enhancement 2: Algorithms and Data Structures</h3>
+
+            <p>
+                This enhancement introduces client-side trip
+                searching and price sorting using Angular and
+                TypeScript. These features allow users to locate
+                specific travel packages and organize results
+                by price in ascending or descending order.
+            </p>
+
+            <a href="https://github.com/Zmart027/CS-465-Full-Stack-Development-/pull/2/changes"
+                class="button github-button" target="_blank" rel="noopener noreferrer">
+                View Enhancement 2 Code
+            </a>
+
+        </section>
+
+        <!-- Enhancement 2 Testing and Validation -->
+
+        <section class="content-card">
+
+            <h2>Testing and Validation</h2>
+
+            <div class="testing-validation-scroll">
+
+                <h3>Trip Search Testing</h3>
+
+                <p>
+                    I tested the trip search functionality by
+                    entering trip names into the search field
+                    and verifying that the displayed results
+                    matched the search criteria. The search
+                    feature uses TypeScript array filtering
+                    to identify matching trips without
+                    modifying the original trip collection.
+                </p>
+
+                <h3>Price Sorting Testing</h3>
+
+                <p>
+                    I tested the sorting functionality by
+                    selecting ascending and descending price
+                    options. The application reorganized the
+                    displayed trips based on their per-person
+                    prices, allowing users to compare travel
+                    packages from lowest to highest or
+                    highest to lowest.
+                </p>
+
+                <h3>Combined Search and Sorting</h3>
+
+                <p>
+                    I also tested the interaction between
+                    searching and sorting to verify that
+                    both features could operate together.
+                    Applying a search term reduced the
+                    displayed trip collection, while
+                    selecting a sorting option organized
+                    the matching results by price.
+                </p>
+
+                <h3>Clear and Reset Functionality</h3>
+
+                <p>
+                    Finally, I tested the Clear functionality
+                    to ensure users could remove their
+                    search criteria and return to the
+                    original trip listing. These tests
+                    helped verify that the new features
+                    improved usability without affecting
+                    the underlying trip data.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Enhancement 2 Testing Screenshots -->
+
+        <section class="content-card">
+
+            <h2>Testing Screenshots</h2>
+
+            <p>
+                The following screenshots document the
+                search, sorting, and reset functionality
+                implemented during Enhancement 2.
+            </p>
+
+            <!-- Trip Search -->
+
+            <details class="assessment-card">
+
+                <summary>Trip Search Functionality</summary>
+
+                <div class="card-scroll">
+
+                    <p>
+                        This section demonstrates how the
+                        application filters travel packages
+                        based on a trip name entered by
+                        the user.
+                    </p>
+
+
+                    <!-- Original Trip Listing -->
+
+                    <figure class="testing-figure">
+                        <img src="assets/enhancement2/trip-list-default.png"
+                            alt="Travlr Getaways displaying the original trip listing" loading="lazy">
+
+                        <figcaption>
+                            Figure 1. Original trip listing before applying
+                            search or sorting options.
+                        </figcaption>
+                    </figure>
+
+                    <!-- Search Results -->
+
+                    <figure class="testing-figure">
+                        <img src="assets/enhancement2/trip-search-results.png"
+                            alt="Trip search results displaying Gale Reef" loading="lazy">
+
+                        <figcaption>
+                            Figure 2. Trip search functionality filtering
+                            the displayed results to Gale Reef.
+                        </figcaption>
+                    </figure>
+
+
+                </div>
+
+            </details>
+
+            <!-- Price Sorting -->
+
+            <details class="assessment-card">
+
+                <summary>Price Sorting Functionality</summary>
+
+                <div class="card-scroll">
+
+                    <p>
+                        These screenshots demonstrate how
+                        users can sort travel packages
+                        from lowest to highest price
+                        or highest to lowest price.
+                    </p>
+
+
+                    <!-- Ascending Price Sorting -->
+
+                    <figure class="testing-figure">
+                        <img src="assets/enhancement2/trip-sort-price-ascending.png"
+                            alt="Travel packages sorted from lowest to highest price" loading="lazy">
+
+                        <figcaption>
+                            Figure 3. Travel packages sorted by price
+                            from lowest to highest using TypeScript
+                            array sorting.
+                        </figcaption>
+                    </figure>
+
+                    <!-- Descending Price Sorting -->
+
+                    <figure class="testing-figure">
+                        <img src="assets/enhancement2/trip-sort-price-descending.png"
+                            alt="Travel packages sorted from highest to lowest price" loading="lazy">
+
+                        <figcaption>
+                            Figure 4. Travel packages sorted by price
+                            from highest to lowest, demonstrating
+                            dynamic reordering of trip data.
+                        </figcaption>
+                    </figure>
+
+
+                </div>
+
+            </details>
+
+        </section>
+
+
+    </main>
+
+    <script src="theme.js"></script>
+
+</body>
+
+</html>

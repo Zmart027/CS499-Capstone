@@ -1,15 +1,56 @@
+/* =========================================
+   CS-499 CAPSTONE PORTFOLIO
+   Light and Dark Mode
+   ========================================= */
+
+/* LIGHT MODE - DEFAULT */
 :root {
     color-scheme: light;
+
     --bg: #f4f6fb;
     --surface: rgba(255, 255, 255, 0.82);
     --surface-strong: #ffffff;
+
     --text: #1f2937;
     --muted: #5b6472;
+
     --accent: #1f6feb;
     --accent-hover: #1558b0;
+
     --border: rgba(31, 41, 55, 0.08);
     --shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+
+    --glow-left: rgba(31, 111, 235, 0.18);
+    --glow-right: rgba(14, 165, 233, 0.16);
+    --background-top: #ffffff;
 }
+
+/* DARK MODE */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --bg: #0b1220;
+    --surface: rgba(24, 35, 54, 0.9);
+    --surface-strong: #192538;
+
+    --text: #edf3ff;
+    --muted: #bac9df;
+
+    --accent: #85baff;
+    --accent-hover: #b4d5ff;
+
+    --border: rgba(185, 205, 235, 0.18);
+    --shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+
+    --glow-left: rgba(31, 111, 235, 0.16);
+    --glow-right: rgba(14, 165, 233, 0.10);
+    --background-top: #111b2d;
+}
+
+
+/* =========================================
+   GLOBAL STYLES
+   ========================================= */
 
 * {
     box-sizing: border-box;
@@ -22,28 +63,53 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
+
     font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+
     color: var(--text);
+
     background:
-        radial-gradient(circle at top left, rgba(31, 111, 235, 0.18), transparent 32%),
-        radial-gradient(circle at top right, rgba(14, 165, 233, 0.16), transparent 28%),
-        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+        radial-gradient(
+            circle at top left,
+            var(--glow-left),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at top right,
+            var(--glow-right),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            var(--background-top) 0%,
+            var(--bg) 100%
+        );
+
+    transition:
+        background-color 250ms ease,
+        color 250ms ease;
 }
+
+/* =========================================
+   PAGE LAYOUT
+   ========================================= */
 
 header,
 main {
     width: min(960px, calc(100% - 2rem));
     margin-left: auto;
-    margin-right: auto;
+     margin-right: auto;
 }
 
 header {
-    padding: 4rem 0 1.5rem;
+    position: relative;
+    padding: 5rem 0 1.5rem;
     text-align: center;
 }
 
 .title {
-    margin: 0;
+    margin: 0 0 1.5rem;
+
     font-size: clamp(2rem, 4vw, 3.5rem);
     line-height: 1.05;
     letter-spacing: -0.03em;
@@ -53,14 +119,22 @@ main {
     display: grid;
     gap: 1.5rem;
     justify-items: center;
+
     padding: 0 0 4rem;
 }
 
+/* =========================================
+   PROJECT LINKS
+   ========================================= */
+
 .project-list {
     list-style: none;
+
     margin: 0;
     padding: 1rem;
+
     width: min(720px, 100%);
+
     display: grid;
     gap: 0.75rem;
 }
@@ -71,78 +145,195 @@ main {
 
 .project-list a {
     display: block;
+
     padding: 1rem 1.25rem;
-    border: 1px solid var(--border);
+
+     border: 1px solid var(--border);
     border-radius: 1rem;
+
     background: var(--surface);
     color: var(--text);
+
     text-decoration: none;
     font-weight: 600;
+
     box-shadow: var(--shadow);
     backdrop-filter: blur(12px);
-    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, color 180ms ease;
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease;
 }
 
 .project-list a:hover,
 .project-list a:focus-visible {
     transform: translateY(-2px);
-    border-color: rgba(31, 111, 235, 0.25);
-    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 24px 60px rgba(15, 23, 42, 0.16);
+
     color: var(--accent-hover);
+
     outline: none;
 }
+
+/* =========================================
+   IMAGE GALLERY
+   ========================================= */
 
 .gallery {
     display: grid;
     place-items: center;
+
     width: min(100%, 420px);
+
     padding: 1rem;
+
     border: 1px solid var(--border);
     border-radius: 1.5rem;
+
     background: var(--surface);
-    box-shadow: var(--shadow);
+
+     box-shadow: var(--shadow);
     backdrop-filter: blur(12px);
 }
 
 .gallery img {
     display: block;
+
     width: min(100%, 320px);
     aspect-ratio: 1 / 1;
+
     object-fit: cover;
+
     border-radius: 1.1rem;
-    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    border: 1px solid var(--border);
 }
 
-.buttons {
+/* =========================================
+   GENERAL BUTTONS
+   ========================================= */
+
+.button {
     appearance: none;
+
+    display: inline-block;
+
     border: 0;
     border-radius: 999px;
+
     padding: 0.9rem 1.5rem;
-    background: linear-gradient(135deg, var(--accent), #2b8cff);
+
+    background:
+        linear-gradient(135deg, #1f6feb, #2b8cff);
+
     color: #ffffff;
+
     font: inherit;
     font-weight: 700;
     letter-spacing: 0.01em;
+
+    text-decoration: none;
+
     cursor: pointer;
-    box-shadow: 0 14px 28px rgba(31, 111, 235, 0.28);
-    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+
+    box-shadow:
+        0 14px 28px rgba(31, 111, 235, 0.28);
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+         filter 180ms ease;
 }
 
 .button:hover,
 .button:focus-visible {
     transform: translateY(-2px);
-    box-shadow: 0 18px 32px rgba(31, 111, 235, 0.34);
+
+    box-shadow:
+        0 18px 32px rgba(31, 111, 235, 0.34);
+
     filter: brightness(1.03);
-    outline: none;
+
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
 }
 
 .button:active {
     transform: translateY(0);
 }
 
+/* =========================================
+   LIGHT / DARK MODE TOGGLE
+   ========================================= */
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    appearance: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.75rem 1.25rem;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    background: var(--surface-strong);
+    color: var(--text);
+
+    font: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow);
+
+      transition:
+        background-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease,
+        border-color 180ms ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+
+    color: var(--accent-hover);
+    border-color: var(--accent);
+}
+
+.theme-toggle:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.theme-toggle:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
 @media (max-width: 640px) {
+
     header {
         padding-top: 2.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
     }
 
     .project-list {
@@ -154,6 +345,456 @@ main {
     }
 
     .gallery {
+        padding: 0.75rem;
+    }
+
+     .theme-toggle {
+    top: 12px;
+    right: 12px;
+    width: auto;
+    max-width: none;
+    }
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* =========================================
+   PORTFOLIO NAVIGATION
+   ========================================= */
+
+.subtitle {
+    margin: 0 0 2rem;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.75rem;
+
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+
+    border-radius: 0.65rem;
+
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition:
+        background-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+.navbar a:hover {
+    background: var(--surface-strong);
+    color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.navbar a.active {
+    background: #1f6feb;
+    color: #ffffff;
+}
+
+.navbar a:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* MOBILE NAVIGATION */
+
+@media (max-width: 640px) {
+    .navbar {
+        gap: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .navbar a {
+        flex: 1 1 auto;
+        padding: 0.7rem 0.85rem;
+        text-align: center;
+        font-size: 0.85rem;
+    }
+}
+
+
+/* =========================================
+   CONTENT CARDS
+   ========================================= */
+
+.content-card {
+    width: 100%;
+    padding: 2rem;
+
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+
+    text-align: left;
+}
+
+.content-card h2 {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+
+    color: var(--text);
+    font-size: 1.5rem;
+}
+
+.content-card p {
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+}
+
+.content-card p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+    .content-card {
+        padding: 1.25rem;
+    }
+}
+
+
+/* Collapsible self-assessment cards */
+
+.assessment-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Clickable heading */
+.assessment-card > summary {
+    padding: 1.5rem 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hide the browser's default arrow */
+.assessment-card > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Add our own dropdown arrow */
+.assessment-card > summary::after {
+    content: "▼";
+    font-size: 0.9rem;
+    color: var(--accent);
+}
+
+/* Turn the arrow when the card opens */
+.assessment-card[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+/* Shared scrollable sections */
+.card-scroll,
+.code-findings-scroll,
+.testing-validation-scroll {
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 1.5rem;
+    border-top: 1px solid var(--border);
+    scrollbar-color: var(--accent) transparent;
+    scrollbar-width: thin;
+}
+
+/* Narrative cards retain their wider padding */
+.card-scroll {
+    padding: 1.5rem 2rem;
+}
+
+/* Paragraph spacing */
+.card-scroll p {
+    line-height: 1.8;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+}
+
+.card-scroll p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Course outcome headings */
+
+.card-scroll h3 {
+    color: var(--accent);
+    font-size: 1.15rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.card-scroll h3:first-child {
+    margin-top: 0;
+}
+
+
+/* Code review video */
+
+.code-review-video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+
+/* Code review findings headings */
+
+.content-card h3 {
+    color: var(--accent);
+    font-size: 1.15rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.content-card h3:first-child {
+    margin-top: 0;
+}
+
+ 
+/* Smaller GitHub buttons */
+
+.github-button {
+    padding: 0.65rem 1.1rem;
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   ENHANCEMENT TESTING SCREENSHOTS
+   ========================================= */
+
+.testing-figure {
+    margin: 1.5rem 0 2rem;
+    padding: 1rem;
+
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+
+    background: var(--surface-strong);
+}
+
+.testing-figure img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+}
+
+.testing-figure figcaption {
+    margin-top: 1rem;
+
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+/* Spacing between screenshots */
+
+.testing-figure + .testing-figure {
+    margin-top: 2rem;
+}
+
+
+/* Dropdowns inside the Testing Screenshots card */
+
+.content-card > .assessment-card {
+    margin-top: 1rem;
+    box-shadow: none;
+    background: var(--surface-strong);
+}
+
+.content-card > .assessment-card > summary {
+    font-size: 1.05rem;
+    padding: 1.1rem 1.25rem;
+}
+
+
+/* CS-499 Course Outcomes container */
+
+.outcomes-container {
+    padding: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+/* Individual course outcome dropdowns */
+
+.outcome-dropdown {
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    background: var(--surface-strong);
+    overflow: hidden;
+}
+
+.outcome-dropdown:last-child {
+    margin-bottom: 0;
+}
+
+.assessment-card .outcome-dropdown > summary {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.outcome-dropdown > summary::after {
+    content: "▼";
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+.outcome-dropdown[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+/* Text inside each course outcome */
+
+.outcome-content {
+    padding: 1.25rem;
+    border-top: 1px solid var(--border);
+}
+
+.outcome-content p {
+    line-height: 1.8;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+}
+
+.outcome-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Paragraph spacing */
+
+.testing-validation-scroll p {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+}
+
+
+
+/* =========================================
+   FINAL CONSISTENCY AND ACCESSIBILITY
+   ========================================= */
+
+/* Keep visited links styled like the original buttons */
+.button:visited {
+    color: #ffffff;
+}
+
+/* Visible keyboard focus for all nested dropdowns */
+.assessment-card > summary:focus-visible,
+.outcome-dropdown > summary:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: -3px;
+    border-radius: 0.5rem;
+}
+
+/* Improve spacing on narrow screens */
+@media (max-width: 640px) {
+    header {
+        padding-top: 5rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 0.6rem 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    .assessment-card {
+        padding: 0;
+    }
+
+    .assessment-card > summary {
+        padding: 1.25rem;
+        font-size: 1.1rem;
+    }
+
+    .card-scroll,
+    .code-findings-scroll,
+    .testing-validation-scroll {
+        padding: 1rem;
+    }
+
+    .navbar a {
+        font-size: 0.8rem;
+    }
+
+    .testing-figure {
         padding: 0.75rem;
     }
 }

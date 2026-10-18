@@ -1,20 +1,242 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Zury's Capstone</title>
-   <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Zury's Capstone</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-   <header>
-       <h1 class="title">Welcome to Zury's Capstone</h1>
-   </header>
-   <main>
-       <ul class="project-list">
-           <li><a href="https://github.com/Zmart027/CS-465-Full-Stack-Development-" target="_blank">CS 465 Full Stack Development</a></li>
-       </ul>       
-   </main>
+
+    <header>
+
+        <h1 class="title">Welcome to Zury's Capstone</h1>
+
+        <p class="subtitle">
+            Computer Science ePortfolio |
+            Southern New Hampshire University
+        </p>
+
+        <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch color theme">
+            🌙 Dark Mode
+        </button>
+
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="index.html"
+               class="active"
+               aria-current="page">
+                Home
+            </a>
+
+            <a href="self-assessment.html">
+                Self-Assessment
+            </a>
+
+            <a href="code-review.html">
+                Code Review
+            </a>
+
+            <a href="enhancement-1.html">
+                Enhancement 1
+            </a>
+
+            <a href="enhancement-2.html">
+                Enhancement 2
+            </a>
+
+            <a href="enhancement-3.html">
+                Enhancement 3
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Welcome Section -->
+
+        <section class="content-card">
+
+            <h2>AboutMy ePortfolio</h2>
+
+            <p>
+                This Computer Science ePortfolio, was
+                developed as part of the CS-499 Computer
+                Science Capstone at Southern New Hampshire
+                University. This portfolio represents
+                the knowledge, technical skills, and
+                experience I have gained throughout
+                my computer science degree program,
+                with a concentration in Software Engineering.
+            </p>
+
+            <p>
+                Throughout my coursework, I developed
+                a stronger understanding of software
+                development, application architecture,
+                database management, and security.
+                My experiences also helped me discover
+                an interest in full-stack development,
+                where I can work with both front-end
+                and back-end technologies to build
+                functional applications.
+            </p>
+
+            <p>
+                This ePortfolio highlights my growth
+                as a developer through a professional
+                self-assessment, code review, and
+                three enhancements to an existing
+                full-stack application.
+            </p>
+
+        </section>
+
+
+        <!-- Capstone Project -->
+
+        <section class="content-card">
+
+            <h2>Featured Capstone Project: Travlr Getaways</h2>
+
+            <p>
+                The primary artifact featured in this
+                portfolio is Travlr Getaways, a full-stack
+                travel application originally developed
+                during CS-465 Full Stack Development.
+            </p>
+
+            <p>
+                The application uses the MEAN stack,
+                consisting of MongoDB, Express.js,
+                Angular, and Node.js. These technologies
+                work together to manage travel packages,
+                process API requests, and display trip
+                information through a web interface.
+            </p>
+
+            <p>
+                For my CS-499 capstone, I selected this
+                application because it provided an
+                opportunity to demonstrate improvements
+                across multiple areas of computer science.
+                Rather than replacing the original
+                application, I implemented focused
+                enhancements that improved security,
+                data processing, and database functionality.
+            </p>
+
+            <a
+                href="https://github.com/Zmart027/CS-465-Full-Stack-Development-/tree/module7"
+                class="button github-button"
+                target="_blank"
+                rel="noopener noreferrer">
+                View Original Artifact
+            </a>
+
+        </section>
+
+
+        <!-- Portfolio Overview -->
+
+        <section class="content-card">
+
+            <h2>ePortfolio Overview</h2>
+
+            <h3>Professional Self-Assessment</h3>
+
+            <p>
+                My self-assessment reflects on my
+                academic journey, technical development,
+                professional goals, and how my coursework and
+                capstone enhancements demonstrate the computer
+                 science program outcomes.
+            </p>
+
+            <a href="self-assessment.html"
+               class="button github-button">
+                View Self-Assessment
+            </a>
+
+
+            <h3>Code Review</h3>
+
+            <p>
+                The code review examines the original
+                Travlr Getaways application, identifies
+                opportunities for improvement, and
+                explains the enhancements selected
+                for the capstone project.
+            </p>
+
+            <a href="code-review.html"
+               class="button github-button">
+                View Code Review
+            </a>
+
+
+            <h3>Enhancement 1: Software Design and Engineering</h3>
+
+            <p>
+                This enhancement improves application
+                security through JWT authentication,
+                role-based authorization, and
+                protected API routes.
+            </p>
+
+            <a href="enhancement-1.html"
+               class="button github-button">
+                View Enhancement 1
+            </a>
+
+
+            <h3>Enhancement 2: Algorithms and Data Structures</h3>
+
+            <p>
+                This enhancement introduces trip
+                searching and price sorting using
+                Angular, TypeScript, and array-based
+                data processing.
+            </p>
+
+            <a href="enhancement-2.html"
+               class="button github-button">
+                View Enhancement 2
+            </a>
+
+
+            <h3>Enhancement 3: Databases</h3>
+
+            <p>
+                This enhancement introduces MongoDB
+                price-range filtering through the
+                Express API, allowing users to
+                retrieve travel packages based on
+                minimum and maximum prices.
+            </p>
+
+            <a href="enhancement-3.html"
+               class="button github-button">
+                View Enhancement 3
+            </a>
+
+        </section>
+
+    </main>
+
+    <script src="theme.js"></script>
+
 </body>
 </html>
