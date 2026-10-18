@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Code Review | Zury's Capstone</title>
 
@@ -22,11 +20,7 @@
             Southern New Hampshire University
         </p>
 
-        <button
-            id="theme-toggle"
-            class="theme-toggle"
-            type="button"
-            aria-label="Switch color theme">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme">
             🌙 Dark Mode
         </button>
 
@@ -37,9 +31,7 @@
                 Self-Assessment
             </a>
 
-            <a href="code-review.html"
-               class="active"
-               aria-current="page">
+            <a href="code-review.html" class="active" aria-current="page">
                 Code Review
             </a>
 
@@ -85,17 +77,17 @@
 
         <section class="content-card">
 
-    <h2>Code Review Walkthrough</h2>
+            <h2>Code Review Walkthrough</h2>
 
-    <video class="code-review-video" controls preload="metadata">
-        <source
-            src="assets/CS499_2 - 2 Code Review_Zury Martinez.mp4"
-            type="video/mp4">
 
-        Your browser does not support the video tag.
-    </video>
+            <iframe width="100%" height="450" src="https://www.youtube.com/embed/PY5qNLx3NuE"
+                title="CS-499 Capstone Code Review" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
 
-</section>
+
+        </section>
 
         <section class="content-card">
 
@@ -103,65 +95,65 @@
 
             <div class="code-findings-scroll">
 
-            <p>
-                Before implementing my CS-499 enhancements, 
-                I reviewed the original Travlr Getaways
-                application to evaluate its existing 
-                functionality, code structure, and areas 
-                that could benefit from improvement. 
-                This review helped me identify changes 
-                that would strengthen security, improve 
-                the user experience, and expand database
-                functionality. 
-            </p>
+                <p>
+                    Before implementing my CS-499 enhancements,
+                    I reviewed the original Travlr Getaways
+                    application to evaluate its existing
+                    functionality, code structure, and areas
+                    that could benefit from improvement.
+                    This review helped me identify changes
+                    that would strengthen security, improve
+                    the user experience, and expand database
+                    functionality.
+                </p>
 
-            <h3>Software Design and Engineering</h3>
+                <h3>Software Design and Engineering</h3>
 
-            <p>
-                One area identified during the review was 
-                the application's access control. 
-                Although the original application supported 
-                authentication, additional authorization 
-                checks were needed to distinguish between 
-                regular users and administrators. 
-                I also identified opportunities to improve 
-                error handling and defensive programming. 
-                These findings guided my first enhancement, 
-                which focused on JWT authentication, 
-                role-based authorization, and protected 
-                API operations. 
-            </p>
+                <p>
+                    One area identified during the review was
+                    the application's access control.
+                    Although the original application supported
+                    authentication, additional authorization
+                    checks were needed to distinguish between
+                    regular users and administrators.
+                    I also identified opportunities to improve
+                    error handling and defensive programming.
+                    These findings guided my first enhancement,
+                    which focused on JWT authentication,
+                    role-based authorization, and protected
+                    API operations.
+                </p>
 
-            <h3>Algorithms and Data Structures</h3>
+                <h3>Algorithms and Data Structures</h3>
 
-            <p>
-                The original trip listing displayed available
-                travel packages but offered limited options 
-                for organizing or locating specific trips. 
-                I identified an opportunity to improve
-                usability by introducing search and sorting 
-                functionality. My second enhancement 
-                addresses this limitation by implementing 
-                client-side trip searching and price sorting 
-                using Angular and TypeScript.
-            </p>
+                <p>
+                    The original trip listing displayed available
+                    travel packages but offered limited options
+                    for organizing or locating specific trips.
+                    I identified an opportunity to improve
+                    usability by introducing search and sorting
+                    functionality. My second enhancement
+                    addresses this limitation by implementing
+                    client-side trip searching and price sorting
+                    using Angular and TypeScript.
+                </p>
 
-            <h3>Databases</h3>
+                <h3>Databases</h3>
 
-            <p>
-                The original application retrieved trip 
-                information from MongoDB without allowing 
-                users to filter results by a selected 
-                price range. I identified an opportunity 
-                to extend the existing API to support 
-                database-side filtering. My third 
-                enhancement introduced minimum and maximum 
-                price parameters and MongoDB comparison 
-                operators to retrieve trips within a 
-                specified price range.
-            </p>
-            
-        </div>
+                <p>
+                    The original application retrieved trip
+                    information from MongoDB without allowing
+                    users to filter results by a selected
+                    price range. I identified an opportunity
+                    to extend the existing API to support
+                    database-side filtering. My third
+                    enhancement introduced minimum and maximum
+                    price parameters and MongoDB comparison
+                    operators to retrieve trips within a
+                    specified price range.
+                </p>
+
+            </div>
 
         </section>
     </main>
@@ -169,4 +161,5 @@
     <script src="theme.js"></script>
 
 </body>
+
 </html>
